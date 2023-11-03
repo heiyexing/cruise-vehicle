@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "author": "WB01094647 <zqc01094647@antgroup.com>",
+  "scripts": {
+    "dev": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi setup",
+    "setup": "umi setup",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "@antv/l7": "^2.19.7",
+    "@antv/larkmap": "^1.4.5",
+    "h3-js": "^4.0.1",
+    "turf": "^3.0.14",
+    "umi": "^4.0.87"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "typescript": "^5.0.3"
+  }
+}
