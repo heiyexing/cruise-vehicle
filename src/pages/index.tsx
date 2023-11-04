@@ -12,9 +12,6 @@ import {
   polygonLayerOptions,
 } from "./layerOptions";
 import { hexData, iconImageData, pointData } from "./mock";
-// import { useEffect, useState } from "react";
-// import { latLngToCell, cellToBoundary } from "h3-js";
-// import { polygon } from "turf";
 
 const config: LarkMapProps = {
   mapType: "Gaode",
@@ -27,30 +24,11 @@ const config: LarkMapProps = {
 };
 
 export default function HomePage() {
-  //经纬度转h3
-  // useEffect(() => {
-  //   const hexId = [].map((item: any) => {
-  //     const [lon, lat] = item.geometry.coordinates;
-  //     return latLngToCell(lon, lat, 7);
-  //   });
-  //   const polygonSet = [...new Set(hexId)];
-  //   const polygonList = polygonSet.map((item) => {
-  //     return cellToBoundary(item, true);
-  //   });
-  //   const newPolygonData = polygonList.map((item) => {
-  //     return polygon([item]);
-  //   });
-  //   console.log(newPolygonData);
-  // }, []);
   return (
     <LarkMap {...config} className={style.larkMap}>
       <IconImageLayer
         {...iconImageLayerOptions}
         source={{ data: iconImageData, parser: { type: "geojson" } }}
-      />
-      <PointLayer
-        {...pointLayerOptions}
-        source={{ data: pointData, parser: { type: "geojson" } }}
       />
       <PolygonLayer
         {...polygonLayerOptions}
@@ -60,6 +38,10 @@ export default function HomePage() {
         shape="line"
         color="#fff"
         source={{ data: hexData, parser: { type: "geojson" } }}
+      />
+      <PointLayer
+        {...pointLayerOptions}
+        source={{ data: pointData, parser: { type: "geojson" } }}
       />
     </LarkMap>
   );

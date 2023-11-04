@@ -14,33 +14,17 @@ export const iconImageLayerOptions: Omit<IconImageLayerProps, "source"> = {
   radius: 20,
   blend: "normal",
   opacity: 1,
-  label: {
-    field: "name",
-    state: {
-      active: {
-        color: "blue",
-      },
-    },
-    style: {
-      fill: "blue",
-      opacity: 0.6,
-      fontSize: 12,
-      textAnchor: "top",
-      textOffset: [0, -30],
-      spacing: 1,
-      padding: [5, 5],
-      stroke: "#ffffff",
-      strokeWidth: 0.3,
-      strokeOpacity: 1.0,
-    },
-  },
 };
 
 export const pointLayerOptions: Omit<PointLayerProps, "source"> = {
   shape: "circle",
   size: 3,
-  color: "#33a02c",
-  zIndex: 3,
+  color: "#46F42B",
+  zIndex: 10,
+  style: {
+    stroke: "#fff",
+    strokeWidth: 1,
+  },
 };
 
 export const lineLayerOptions: Omit<LineLayerProps, "source"> = {
